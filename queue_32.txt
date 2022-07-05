@@ -1,0 +1,166 @@
+#include"iostream.h"
+#include"conio.h"
+class QUEUE_32
+{
+ private:
+	int *A,size,front,rear,ele,i,n;
+ public:
+	QUEUEE_32(int);
+	void ADD(int);
+	int DEL();
+	void LIST();
+	};
+
+	QUEUE_32::QUEUE_32(int par)
+	{
+	       size=par;
+	       rear=front=0;
+	       A= new int[size+1];
+	}
+	void QUEUE_32::ADD(int)
+	{
+	       if(rear==size)
+	       {
+	       cout<<"QUEUE is full";
+	       return;
+	       }
+	       rear=rear+1;
+	       ele=A[rear];
+	}
+	int QUEUE_32::DEL()
+	{
+	       if(front==0)
+	       {
+	       cout<<"QUEUE is empty";
+	       return NULL;
+	       }
+	       else
+	       {
+		     ele=A[front];
+		     front=front-1;
+	       }
+	return ele;
+	}
+	 void QUEUE_32::LIST()
+	 {
+	       if(front==0)
+	       {
+	       cout<<"QUEUE is empty";
+	       return;
+	 }
+	       for(i=1;i<=n;i++)
+	       {
+	       cout<<A[i]<<" ";
+	       }
+	 }
+	 void MENU()
+	 {
+	      int opt,ele,rear,front,siz;
+	      cout<<"Enter the size of the list:";
+	      cin >> size;
+	      QUEUE_32 obj(size);
+	      do
+	 {
+		   cout <<"\...choose the option....";
+		   cout <<"\n 1.Add element";
+		   cout <<"\n 2.Del element";
+		   cout <<"\n 3.List element";
+		   cout <<"\n 4.Exit";
+		   cout <<"\n Enter your choice :-";
+		   cin >>  opt;
+		   switch (opt)
+		   {
+	       case 1:
+		      cout <<"\n ADD ELEMENT AT QUEUE:";
+		      cin >> eLe;
+		      obj.ADD(ele);
+		      break;
+	       case 2:
+		      cout <<"\n DEL THE ELEMENT FROM QUEUE:";
+		      cin >> ele;
+		      obj.DEL();
+		      break;
+	       case 3:
+		      obj.LIST();
+		      break;
+	       case 4:
+		      return;
+	       default:
+		       cout <<"\n Invalid option";
+	       }
+	 } while (1);
+
+}
+	 void main()
+	 {
+		int ele,obj;
+		clrscr();
+		MENU();
+	 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
